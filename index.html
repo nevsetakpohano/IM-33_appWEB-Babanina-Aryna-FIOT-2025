@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelf | Особиста цифрова бібліотека</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+    <div id="app">
+        <header id="header">
+            <h1 id="app-title">BookShelf</h1>
+            <nav id="main-nav">
+                <ul id="nav-list">
+                    <li class="nav-item"><button data-page="library">Моя бібліотека</button></li>
+                    <li class="nav-item"><button data-page="add-book">Додати книгу</button></li>
+                    <li class="nav-item"><button data-page="search">Пошук</button></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Про проект</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section id="library-section" class="page-section active">
+                <h2 class="section-title">Моя бібліотека</h2>
+                
+                <div id="filters-container">
+                    <form id="filter-form">
+                        <input type="text" id="filter-search" placeholder="Фільтрувати книги...">
+                        <select id="filter-genre">
+                            <option value="">Всі жанри</option>
+                        </select>
+                        <button type="button" id="apply-filters">Застосувати</button>
+                    </form>
+                </div>
+
+                <div id="library-table-container">
+                    <table id="books-table" border="1">
+                        <thead id="table-header">
+                            <tr>
+                                <th>ID</th>
+                                <th>Назва книги</th>
+                                <th>Автор</th>
+                                <th>Жанр</th>
+                                <th>Рік</th>
+                                <th>Дії</th>
+                            </tr>
+                        </thead>
+                        <tbody id="books-table-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="stats-container">
+                    <h3>Статистика бібліотеки</h3>
+                    <ul id="stats-list">
+                    </ul>
+                </div>
+            </section>
+
+            <section id="add-book-section" class="page-section">
+                <h2 class="section-title">Додати нову книгу</h2>
+                
+                <form id="add-book-form">
+                    <div class="form-group">
+                        <label for="book-title">Назва книги:</label>
+                        <input type="text" id="book-title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-author">Автор:</label>
+                        <input type="text" id="book-author" name="author" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-genre">Жанр:</label>
+                        <select id="book-genre" name="genre" required>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-year">Рік видання:</label>
+                        <input type="number" id="book-year" name="year" min="1000" max="2025">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-description">Опис:</label>
+                        <textarea id="book-description" name="description" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" id="save-book">Зберегти книгу</button>
+                        <button type="reset" id="reset-form">Очистити</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="search-section" class="page-section">
+                <h2 class="section-title">Пошук книг</h2>
+                
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Введіть назву, автора або опис...">
+                    <button type="submit">🔍 Пошук</button>
+                </form>
+                
+                <div id="search-results">
+                    <h3>Результати пошуку</h3>
+                    <ul id="results-list">
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer id="app-footer">
+            <div id="footer-content">
+                <p id="copyright">© 2025 BookShelf. Особиста цифрова бібліотека.</p>
+                <p id="lab-info">Лабораторна робота №1: Структура HTML-документа</p>
+                <div id="footer-links">
+                    <a href="about.html">Про проект</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- <script src="js/script.js"></script> -->
+</body>
+</html>
