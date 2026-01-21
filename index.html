@@ -10,6 +10,7 @@
     <div id="app">
         <header id="header">
             <h1 id="app-title">BookShelf</h1>
+            <button id="burger-menu" aria-label="Відкрити меню">☰</button>
             <nav id="main-nav">
                 <ul id="nav-list">
                     <li class="nav-item"><button data-page="library">Моя бібліотека</button></li>
@@ -62,6 +63,14 @@
                         <li>Найдавніша книга: -</li>
                         <li>Найновіша книга: -</li>
                     </ol>
+
+                    <div class="view-toggle-container">
+                        <button id="switch-view-btn" class="view-toggle-btn">
+                            📱 Перемкнути на картковий вигляд
+                        </button>
+                    </div>
+
+                    <div id="books-grid-container" class="books-grid" style="display: none;">
                 </div>
             </section>
 
